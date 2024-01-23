@@ -4,7 +4,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_ninja/screens/cart.dart';
 import 'package:food_ninja/screens/chat.dart';
+import 'package:food_ninja/screens/confirm_order.dart';
 import 'package:food_ninja/screens/dashboard.dart';
 import 'package:food_ninja/screens/forgot_password.dart';
 import 'package:food_ninja/screens/onboarding.dart';
@@ -192,11 +194,13 @@ final GoRouter _router = GoRouter(
             GoRoute(
               path: '/cart',
               pageBuilder: (context, state) => const NoTransitionPage(
-                child: SignIn(),
+                child: Cart(),
               ),
               routes: [
                 GoRoute(
-                    path: 'path', builder: (context, state) => const SignIn()),
+                  path: 'confirm-order',
+                  builder: (context, state) => const ConfirmOrder(),
+                ),
               ],
             ),
           ],

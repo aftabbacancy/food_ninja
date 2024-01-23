@@ -8,6 +8,7 @@ class Images {
   static const String back = 'assets/images/common/back.svg';
   static const String circlePin =
       'assets/images/common/location-pin-circle.svg';
+  static const String paypal = 'assets/images/common/paypal-logo.svg';
   static const String success = 'assets/images/common/success.svg';
   static const String tiltBg = 'assets/images/common/tilt-bg.svg';
   static const String notification = 'assets/images/common/notification.svg';
