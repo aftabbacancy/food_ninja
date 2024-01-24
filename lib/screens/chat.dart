@@ -73,6 +73,7 @@ class _ChatState extends State<Chat> {
                     child: ListView.builder(
                         shrinkWrap: true,
                         itemCount: 12,
+                        primary: false,
                         itemBuilder: (context, index) {
                           if (index == 11) {
                             return const Padding(

@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -120,8 +122,9 @@ class _DashboardState extends State<Dashboard> {
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Expanded(
-                              flex: 8,
+                            SizedBox(
+                              height: 45,
+                              width: width - 110,
                               child: Container(
                                 decoration: const BoxDecoration(
                                   color: CustomColors.orangeTransparent,
@@ -153,57 +156,65 @@ class _DashboardState extends State<Dashboard> {
                                               ResponsiveSizes.responsiveWidth(
                                                   19, width),
                                         ),
-                                        Flexible(
-                                          child: TextField(
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.normal,
-                                              fontSize:
-                                                  FontSizes.responsiveSize(12),
-                                            ),
-                                            decoration: const InputDecoration(
-                                              contentPadding:
-                                                  EdgeInsets.fromLTRB(
-                                                0,
-                                                5,
-                                                0,
-                                                5,
+                                        SizedBox(
+                                          height: 40,
+                                          width: width - 180,
+                                          child: Expanded(
+                                            child: TextField(
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.normal,
+                                                fontSize:
+                                                    FontSizes.responsiveSize(
+                                                        12),
                                               ),
-                                              enabledBorder: OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Color.fromRGBO(
-                                                    244,
-                                                    244,
-                                                    244,
-                                                    1,
+                                              decoration: const InputDecoration(
+                                                contentPadding:
+                                                    EdgeInsets.fromLTRB(
+                                                  0,
+                                                  5,
+                                                  0,
+                                                  5,
+                                                ),
+                                                enabledBorder:
+                                                    OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                    color: Color.fromRGBO(
+                                                      244,
+                                                      244,
+                                                      244,
+                                                      1,
+                                                    ),
+                                                    width: 1.0,
                                                   ),
-                                                  width: 1.0,
-                                                ),
-                                                borderRadius: BorderRadius.all(
-                                                  Radius.circular(15),
-                                                ),
-                                              ),
-                                              focusedBorder: OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Color.fromRGBO(
-                                                    244,
-                                                    244,
-                                                    244,
-                                                    0.8,
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                    Radius.circular(15),
                                                   ),
-                                                  width: 1.0,
                                                 ),
-                                              ),
-                                              hintText:
-                                                  "What do you want to order?",
-                                              hintStyle: TextStyle(
-                                                color: CustomColors.orange,
-                                              ),
-                                              labelStyle: TextStyle(
-                                                color: Color.fromRGBO(
-                                                  59,
-                                                  59,
-                                                  59,
-                                                  0.2,
+                                                focusedBorder:
+                                                    OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                    color: Color.fromRGBO(
+                                                      244,
+                                                      244,
+                                                      244,
+                                                      0.8,
+                                                    ),
+                                                    width: 1.0,
+                                                  ),
+                                                ),
+                                                hintText:
+                                                    "What do you want to order?",
+                                                hintStyle: TextStyle(
+                                                  color: CustomColors.orange,
+                                                ),
+                                                labelStyle: TextStyle(
+                                                  color: Color.fromRGBO(
+                                                    59,
+                                                    59,
+                                                    59,
+                                                    0.2,
+                                                  ),
                                                 ),
                                               ),
                                             ),
@@ -218,7 +229,9 @@ class _DashboardState extends State<Dashboard> {
                             SizedBox(
                               width: ResponsiveSizes.responsiveWidth(15, width),
                             ),
-                            Flexible(
+                            SizedBox(
+                              width: 45,
+                              height: 45,
                               child: Container(
                                 height: ScreenUtil().setHeight(47),
                                 decoration: const BoxDecoration(

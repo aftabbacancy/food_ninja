@@ -28,7 +28,15 @@ import 'package:go_router/go_router.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   if (!kIsWeb) {
-    await Firebase.initializeApp();
+    const options = FirebaseOptions(
+      apiKey: "AIzaSyDFZJpI4G0QAHQ4GkHhrWNrUB7I6OTCiP4",
+      appId: "1:616254766388:web:add68db5054bc5d6f47961",
+      messagingSenderId: "616254766388",
+      projectId: "food-ninja-b1914",
+    );
+    await Firebase.initializeApp(
+      options: options,
+    );
   } else {
     const options = FirebaseOptions(
       apiKey: "AIzaSyDFZJpI4G0QAHQ4GkHhrWNrUB7I6OTCiP4",

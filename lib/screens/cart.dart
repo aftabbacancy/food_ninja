@@ -73,7 +73,7 @@ class _CartState extends State<Cart> {
                     ),
                     ListView.builder(
                       shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
+                      primary: false,
                       itemCount: 12,
                       itemBuilder: (context, index) {
                         if (index == 11) {
